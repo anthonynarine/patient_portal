@@ -1,0 +1,22 @@
+pip install django
+django-admin startproject core
+pip install djangorestframework
+    project settings:
+    add "rest_framework" to installed apps
+pip install django-cors-headers
+    project settings:
+    add "corsheaders" to installed apps
+    add "corsheaders.middleware.CorsMiddleware," to middleware
+
+pip install python-dotenv
+    create a .env file in root directory.
+    DEBUG=True
+    SECRET_KEY=mysecretkey
+    project settings:
+    from dotenv import load_dotenv
+    import os
+    load_dotenv()
+    DEBUG = os.getenv("DEBUG")
+    SECRET_KEY = os.getenv("SECRET_KEY")
+
+
